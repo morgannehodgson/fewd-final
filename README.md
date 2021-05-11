@@ -10,7 +10,7 @@ eCommerce website
 -- 5 category pages with unique header blocks
 -- contact page
 
-# ![](iPhone X, XS, 11 Pro – 1.png)
+# ![](home-iphone-mockup.png
 
-# ![](Web 1920 – 1.png)
+# ![](home-web-mockup.png)
 
