@@ -9,6 +9,8 @@ Final Website
 eCommerce website
 -- 5 category pages with unique header blocks
 -- contact page
+-- cart
+-- checkout
 
 # ![](home-iphone-mockup.png)
 
