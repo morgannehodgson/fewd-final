@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swa");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+
+body {
+    width: 100%;
+    margin: 0 0 0 auto;
+    font: normal 400 1.2em/1.4 Raleway, sans-serif;
+    overflow: auto;
+}
+
+
+main {
+    margin: 5%;
+}
+
+h1 {
+    font: normal normal 2em/1.6 Yeseva One, serif;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+
+h2 {
+    font: normal 700 1.2em/1.4 Raleway, sans-serif;
+    /* text-transform: uppercase; */
+}
+
+/* body is automatically Montserrat Regular 16pt, only change whats needed*/
+
+
+/* also same as nav links rn need to edit */
+
+a {
+    font: normal 200 1.2em/1.4 Raleway, sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: black;
+    letter-spacing: .05em;
+    /* text-transform: uppercase; */
+}
+
+#category-links {
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+/* Navigation bar */
+
+
+
+
+
+#navigation {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    overflow: hidden;
+}
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+
+.sticky + main {
+    padding-top: 60px;
+}
+
+
+#menu-triggers {
+    flex-basis: 35vw;
+    height: auto;
+    box-sizing: border-box;
+    /* position: fixed; */
+    display: flex;
+    background-color: bisque;
+    justify-content: space-around;
+}
+
+#cart-icon {
+    flex-basis: 20%;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+    background-image: url("/images/brand-assets/cart-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    margin: 5%;
+}
+
+#nav-logo {
+    flex-basis: 70%;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+    background-image: url("/images/brand-assets/cmxxix-logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    margin: 5%;
+}
+
+#hamburger-icon {
+    flex-basis: 10%;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+    background-image: url("/images/brand-assets/hamburger-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    margin: 10%;
+}
+
+
+/* Slide in menu with page links */
+
+
+#menu-items {
+    width: 100vw;
+    height: 10vh;
+    /* on mobile will be 100vh and need to move menu triggers to align right */
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate3d(-100vw, 0, 0);
+    transition: transform .3s cubic-bezier(0, .52, 0, 1);
+    box-sizing: border-box;
+    /* display: flex; */
+    align-content: space-around;
+    background-color: #ffffff;
+    justify-content: right;
+    
+}
+
+#menu-items.show {
+    transform: translate3d(35vw, 0, 0);
+}  
+
+
+#menu-items ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    display: flex;
+  }
+  
+  li a {
+    /* display: block; */
+    color: black;
+    text-align: center;
+    padding: 0em 2em;
+    text-decoration: none;
+    font: normal 400 1.2em/1.4 Raleway, sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  
+  li a:hover {
+    color: blueviolet;
+  }
+
+  /* #menu-triggers-opened {
+    flex-basis: 25vw;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    background-color: bisque;
+    justify-content: left;
+} */
+
+button#x-close {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+button#x-close:hover {
+    color: cadetblue;
+}
+
+
+
+/* Page Content */
+
+
+
+.web-header {
+    width: 100%;
+    height: 90vh;
+    box-sizing: border-box;
+    border: 3px solid gold;
+    background-color: oldlace;
+}
+
+.image-collage {
+    display: flex;
+}
+
+.home-images {
+    display: flex;
+}
+
+.feat-home {
+    max-width: 100%; 
+    display: flexbox;
+}
+
+#img-1 {
+    width: 25%;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+
+#img-2 {
+    width: 55%;
+    height: auto;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+#img-3 {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 30vh;
+    left: 50%;
+}
+
+.heading-block-outer {
+    display: flex;
+    flex-basis: 40%;
+    position: absolute;
+    top: 55vh;
+    left: 10%;
+    background-color: lemonchiffon;
+    margin: 0 auto;
+    padding: 1% 5%;
+}
+
+
+.featured-collection {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+#collection-main-image {
+    flex-basis: 50vw;
+    height: 30vh;
+    background-color: cadetblue;
+    background-image: url(/images/clothingmodels-35.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+#collection-text {
+    flex-basis: 35%;
+    height: 20vh;
+    background-color: chartreuse;
+}
+
+#feat-products {
+    margin-top: 3%;
+    height: 50%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.product-image-feat {
+    flex-basis: 24.5%;
+    width: 100%;
+    position: relative;
+}
+
+
+.product-image-feat:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+#feat-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: grey; 
+    background-image: url(/images/clothingmodels-17.jpg);
+    background-size: cover;
+}
+
+
+#feat-products {
+    margin: 3% 0% 10% 0%;
+    height: 50%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.product-image-feat {
+    flex-basis: 24.5%;
+    width: 100%;
+    position: relative;
+}
+
+
+.product-image-feat:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+#feat-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: grey; 
+    background-image: url(/images/clothingmodels-17.jpg);
+    background-size: cover;
+}
+
+#home-product-row {
+    margin: 3% 0% 10% 0%;
+    height: 50%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.product-image-home {
+    flex-basis: 16%;
+    width: 100%;
+    position: relative;
+}
+
+
+.product-image-home:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+#product-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: grey; 
+    background-image: url(/images/clothingmodels-17.jpg);
+    background-size: cover;
+}
+
+.section-heading-container {
+    display: flex;
+    justify-content: center;
+}
+
+.section-block {
+    width: 50%;
+    padding: 3% 6%;
+    background-color: honeydew;
+}
+
+footer {
+    height: 20vh;
+    padding: 2%;
+    background-color: green;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.social-links {
+    flex-basis: 15%;
+    height: auto;
+    box-sizing: border-box;
+    background-color: bisque;
+}
+
+.social-icon {
+    width: 70%;
+    height: 3vh;
+    margin: 10% auto;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+    display: block;
+}
+
+#facebook {
+    background-image: url("/images/brand-assets/cart-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+.footer-links {
+    flex-basis: 20%;
+    display: block;
+    margin-left: 20%;
+    height: auto;
+    background-color: hotpink;
+    font-size: .8em;
+    text-align: end;
+}
+
+.footer-menu {
+    flex-basis: 20%;
+    display: block;
+    margin-left: 10%;
+    height: auto;
+    background-color: hotpink;
+    font-size: .8em;
+    text-align: end;
+}
+
+@media screen and (max-width: 600px) {
+    #hide-mobile {
+      display: none;
+    }
+
+    .heading-block-outer {
+        display: flex;
+        flex-basis: 80%;
+        width: 80%;
+        position: absolute;
+        top: 60vh;
+        left: 5%;
+        background-color: lemonchiffon;
+        margin: 0 auto;
+        padding: 1% 5%;    
+    }
+
+    #img-3 {
+        width: 100%;
+        position: absolute;
+        top: 10vh;
+        left: 12%;
+    }
+
+  }
