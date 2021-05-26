@@ -16,19 +16,39 @@
 
 <!-- always visible menu -->
 <header>   
-    <div id="navigation">
-        <div id="menu-triggers">
+    <nav id="navbar">
+        <div id="menu">
+            <div id="logo">
+                <button id="nav-logo"></button>
+            </div>
+            <div class="">
+                
+            </div>
             <button id="cart-icon"></button>
-            <button id="nav-logo"></button>
             <button id="hamburger-icon"></button>
         </div>
+    </nav>
+
+    <!-- hidden menu -->
+
+    <div id="menu-expand">
+        <div class="logo">
+            <button id="nav-logo"></button>
+            <button id="cart-icon"></button>
+            <button id="x-close">close</button>
+        </div>
+        <div class="menu">
+            <a href="./category-tops.html">Tops</a>
+            <a href="./category-tops.html">Bottoms</a>
+            <a href="./category-tops.html">Shoes</a>
+            <a href="./category-tops.html">Sale</a>
+        </div>    
     </div>
-            <!-- do I need to put a hidden unordered list for the nav links ADA?  -->
 </header>
 
 <main>
 <!-- Rest of content -->
-    <div class="web-header">
+    <div class="home-hero">
         <div class="image-collage">
             <!-- only show on desktop -->
             <div class="home-images" id="hide-mobile">
@@ -52,29 +72,16 @@
     <!-- Section #1 Featured/Main Product category (could be collection of all products or a new or exisiting category) -->
 
     <div class="featured-collection">
-        <div id="collection-main-image"></div>
-        <div id="collection-text">
+        <img class="feat-image" src="/images/clothingmodels-35.jpg" alt="">
+        <div class="category">
             <h2>Product Category</h2>
             <a id="category-links" href="">Link ></a>
         </div>
     </div>
     
         
+    <!-- 4 product grid -->
     
-    <div id="feat-products">
-        <div class="product-image-feat">
-            <div id="feat-1"></div>
-        </div>
-        <div class="product-image-feat">
-            <div id="feat-1"></div>
-        </div>
-        <div class="product-image-feat">
-            <div id="feat-1"></div>
-        </div>
-        <div class="product-image-feat">
-            <div id="feat-1"></div>
-        </div>
-    </div>
     
     <!-- how can I make this responsive and change number of products on smaller screen? with a slider carousel -->
 
@@ -168,6 +175,7 @@
     </div>
 
     <div id="feat-products">
+        <!-- JS to auto populate -->
         <div class="product-image-feat">
             <div id="feat-1"></div>
         </div>
@@ -214,29 +222,7 @@
 </footer>
 
 
-    <!-- hidden menu -->
-    
-    <div id="menu-items">
-        <!-- <div id="menu-triggers-opened">
-            <button id="nav-logo"></button>
-            <button id="hamburger-icon"></button>
-        </div>  -->
-        <ul>
-            <li id="nav-link">
-                <a href="">Tops</a>
-            </li>
-            <li id="nav-link"> 
-                <a href="">Bottoms</a>
-            </li>
-            <li id="nav-link">
-                <a href="">Shoes</a>
-            </li>
-            <li id="nav-link">
-                <a href="">Sale</a>
-            </li>
-        </ul>
-        <button id="x-close">close</button>
-    </div>
+
 
 
 

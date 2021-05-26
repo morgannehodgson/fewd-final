@@ -11,10 +11,6 @@ body {
 }
 
 
-main {
-    margin: 5%;
-}
-
 h1 {
     font: normal normal 2em/1.6 Yeseva One, serif;
     text-transform: uppercase;
@@ -27,11 +23,6 @@ h2 {
     /* text-transform: uppercase; */
 }
 
-/* body is automatically Montserrat Regular 16pt, only change whats needed*/
-
-
-/* also same as nav links rn need to edit */
-
 a {
     font: normal 200 1.2em/1.4 Raleway, sans-serif;
     font-size: 1.2em;
@@ -41,65 +32,43 @@ a {
     /* text-transform: uppercase; */
 }
 
-#category-links {
-    font-size: 1em;
-    text-decoration: underline;
+/* body is automatically Montserrat Regular 16pt, only change whats needed*/
+
+
+
+
+#hide-mobile {
+    display: none;
 }
 
-/* Navigation bar */
-
-
-
-
-
-#navigation {
-    width: 100%;
+/* Mobile navigation */
+nav {
     height: 10vh;
+    border: 5px solid fuchsia;
+    box-sizing: border-box;
     display: flex;
-    overflow: hidden;
+    margin-bottom: 5vh;
+    padding: 2% 5% 0% 3%;
+    z-index: 9999;
 }
 
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-  
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-
-.sticky + main {
-    padding-top: 60px;
-}
-
-
-#menu-triggers {
-    flex-basis: 35vw;
+#menu {
+    flex-basis: 100vw;
     height: auto;
     box-sizing: border-box;
-    /* position: fixed; */
     display: flex;
     background-color: bisque;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-#cart-icon {
-    flex-basis: 20%;
-    background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-    background-image: url("/images/brand-assets/cart-icon.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    box-sizing: border-box;
-    margin: 5%;
+#logo {
+    
 }
 
 #nav-logo {
-    flex-basis: 70%;
+    /* flex-basis: 30%; */
+    width: 100%;
     background: none;
 	color: inherit;
 	border: none;
@@ -108,11 +77,22 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     box-sizing: border-box;
-    margin: 5%;
+}
+
+#cart-icon {
+    width: 25px;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+    background-image: url("/images/brand-assets/cart-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
 }
 
 #hamburger-icon {
-    flex-basis: 10%;
+    width: 25px;
     background: none;
 	color: inherit;
 	border: none;
@@ -121,49 +101,41 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     box-sizing: border-box;
-    margin: 10%;
 }
+
+
 
 
 /* Slide in menu with page links */
 
 
-#menu-items {
+#menu-expand {
     width: 100vw;
-    height: 10vh;
-    /* on mobile will be 100vh and need to move menu triggers to align right */
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    transform: translate3d(-100vw, 0, 0);
+    transform: translate3d(200vw, 0, 0);
     transition: transform .3s cubic-bezier(0, .52, 0, 1);
+    z-index: 1000;
     box-sizing: border-box;
-    /* display: flex; */
-    align-content: space-around;
     background-color: #ffffff;
-    justify-content: right;
-    
+    align-content: right;
 }
 
-#menu-items.show {
-    transform: translate3d(35vw, 0, 0);
-}  
+#menu-expand.show {
+    transform: translate3d(0vw, 0, 0);
+}
 
 
-#menu-items ul {
-    list-style-type: none;
+.menu {
+    display: block;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
-
-li {
-    float: left;
-    display: flex;
-  }
   
-  li a {
-    /* display: block; */
+.menu a {
     color: black;
     text-align: center;
     padding: 0em 2em;
@@ -173,20 +145,12 @@ li {
     text-decoration: none;
     letter-spacing: .1em;
     text-transform: uppercase;
-  }
+}
   
-  li a:hover {
+.menu a:hover {
     color: blueviolet;
-  }
-
-  /* #menu-triggers-opened {
-    flex-basis: 25vw;
-    height: auto;
-    box-sizing: border-box;
-    display: flex;
-    background-color: bisque;
-    justify-content: left;
-} */
+    font-family: serif;
+}
 
 button#x-close {
     background: none;
@@ -203,18 +167,89 @@ button#x-close:hover {
     color: cadetblue;
 }
 
+/* Home Hero Block */
 
-
-/* Page Content */
-
-
-
-.web-header {
+.home-hero {
     width: 100%;
-    height: 90vh;
+    height: 85vh;
     box-sizing: border-box;
-    border: 3px solid gold;
-    background-color: oldlace;
+    background-color: firebrick;
+}
+
+
+
+#img-3 {
+    width: 100%;
+    position: absolute;
+    top: 10vh;
+    left: 12%;
+}
+
+.heading-block-outer {
+    display: flex;
+    flex-basis: 88%;
+    width: 80%;
+    position: absolute;
+    top: 60vh;
+    left: 5%;
+    background-color: lemonchiffon;
+    margin: 0 auto;
+    padding: 1% 5%;    
+}
+
+/* Home - Featured Collection */
+
+.featured-collection {
+    display: block;
+}
+
+.feat-image {
+    width: 100vw;
+    height: 30vh;
+
+}
+
+.feat-image img {
+    width: 100vw;
+    height: auto;
+    background-color: cadetblue;
+    box-sizing: border-box;
+}
+
+/* category pages */
+
+
+.category-hero {
+    width: 100vw;
+    height: 100vh;
+    border: 30px solid peachpuff;
+    box-sizing: border-box;
+}
+
+#tops-hero {
+    background-image: url(/images/clothingmodels-37.jpg)
+}
+
+
+
+@media screen and (min-width: 600px) {
+    
+main {
+    padding-top: 12vh;
+}
+
+nav {
+    z-index: 1000;
+    margin: 0;
+}
+
+#hide-mobile {
+    display: block;
+}
+
+.home-hero {
+    height: 100vh;
+    z-index: 1;
 }
 
 .image-collage {
@@ -272,38 +307,15 @@ button#x-close:hover {
     box-sizing: border-box;
 }
 
-#collection-main-image {
-    flex-basis: 50vw;
-    height: 30vh;
-    background-color: cadetblue;
-    background-image: url(/images/clothingmodels-35.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    box-sizing: border-box;
-}
 
-#collection-text {
+
+.featured-collection#content {
     flex-basis: 35%;
     height: 20vh;
     background-color: chartreuse;
 }
 
-#feat-products {
-    margin-top: 3%;
-    height: 50%;
-    box-sizing: border-box;
-    justify-content: space-between;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-}
 
-
-.product-image-feat {
-    flex-basis: 24.5%;
-    width: 100%;
-    position: relative;
-}
 
 
 .product-image-feat:after {
@@ -312,58 +324,37 @@ button#x-close:hover {
     padding-bottom: 100%;
 }
 
-#feat-1 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: grey; 
-    background-image: url(/images/clothingmodels-17.jpg);
-    background-size: cover;
-}
 
-
-#feat-products {
-    margin: 3% 0% 10% 0%;
-    height: 50%;
-    box-sizing: border-box;
-    justify-content: space-between;
-    overflow: hidden;
+.feat-product-row {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
 }
 
+.feat-product-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
 
 .product-image-feat {
     flex-basis: 24.5%;
-    width: 100%;
+    /* width: 100%; */
     position: relative;
 }
 
-
-.product-image-feat:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-}
-
 #feat-1 {
-    position: absolute;
+    /* position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100%; */
     background-color: grey; 
     background-image: url(/images/clothingmodels-17.jpg);
     background-size: cover;
 }
 
-#home-product-row {
-    margin: 3% 0% 10% 0%;
-    height: 50%;
-    box-sizing: border-box;
-    justify-content: space-between;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 
 .product-image-home {
@@ -399,81 +390,6 @@ button#x-close:hover {
     background-color: honeydew;
 }
 
-footer {
-    height: 20vh;
-    padding: 2%;
-    background-color: green;
-    box-sizing: border-box;
-    display: flex;
-}
 
-.social-links {
-    flex-basis: 15%;
-    height: auto;
-    box-sizing: border-box;
-    background-color: bisque;
-}
-
-.social-icon {
-    width: 70%;
-    height: 3vh;
-    margin: 10% auto;
-    background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-    display: block;
-}
-
-#facebook {
-    background-image: url("/images/brand-assets/cart-icon.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    box-sizing: border-box;
-}
-
-.footer-links {
-    flex-basis: 20%;
-    display: block;
-    margin-left: 20%;
-    height: auto;
-    background-color: hotpink;
-    font-size: .8em;
-    text-align: end;
-}
-
-.footer-menu {
-    flex-basis: 20%;
-    display: block;
-    margin-left: 10%;
-    height: auto;
-    background-color: hotpink;
-    font-size: .8em;
-    text-align: end;
-}
-
-@media screen and (max-width: 600px) {
-    #hide-mobile {
-      display: none;
-    }
-
-    .heading-block-outer {
-        display: flex;
-        flex-basis: 80%;
-        width: 80%;
-        position: absolute;
-        top: 60vh;
-        left: 5%;
-        background-color: lemonchiffon;
-        margin: 0 auto;
-        padding: 1% 5%;    
-    }
-
-    #img-3 {
-        width: 100%;
-        position: absolute;
-        top: 10vh;
-        left: 12%;
-    }
 
   }
