@@ -1,9 +1,0 @@
-@media screen and (max-width: 600px) {
-    #feat_img_landscape {
-        visibility: hidden;
-    }
-
-    #feat_img_square {
-        visibility: hidden;
-    }
-}
