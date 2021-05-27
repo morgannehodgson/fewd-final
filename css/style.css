@@ -71,6 +71,7 @@ nav {
     width: 100vw;
     line-height: 60px;
     background: rgba(255, 255, 255, .40);
+    z-index: 1;
 }
 
 nav ul {
@@ -143,6 +144,7 @@ main {
 
 main#product-page {
     margin-top: -50%;
+    background-color: white;
 }
 
 .featured-collection {
@@ -241,7 +243,7 @@ footer {
 
     main {
         padding-top: 12vh;
-        margin: 15%;
+        /* padding: 15%; */
     }
 
     header {
