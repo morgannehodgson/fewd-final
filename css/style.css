@@ -242,9 +242,7 @@ footer {
 
 @media screen and (min-width: 600px) {
 
-    #fix {
-        margin-top: -50vh;
-    }
+
 
     main {
         padding-top: 12vh;
